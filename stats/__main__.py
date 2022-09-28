@@ -27,7 +27,7 @@ def pair_stats(pair):
 
 def calculate_vda_wilcoxon_a12(df, columns, max_workers=8):
     import pandas as pd
-    from utils.pool_executors import process_parallel_run
+    from commons.pool_executors import process_parallel_run
 
     pairs = [((c1, c2), df[c1].tolist(), df[c2].tolist())
              for i, c1 in enumerate(columns)
